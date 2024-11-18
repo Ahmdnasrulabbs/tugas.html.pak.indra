@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Website Prodi RPL - Polibang</title>
+</head>
+<body>
+
+    <!-- Logo dan Identitas Polibang -->
+    <header style="text-align: center; background-color: #0f6fee; padding: 20px;">
+        <img src="logo polibang.jpeg" alt="Logo Polibang" width="100" height="100">
+        <h1 style="color: white;">Politeknik Negeri Bangka Belitung (Polibang)</h1>
+        <h2 style="color: white;">Program Studi Rekayasa Perangkat Lunak (RPL)</h2>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav style="background-color: #084ea8; color: white; padding: 10px;">
+        <ul style="list-style-type: none; padding: 0; text-align: center;">
+            <li style="display: inline; margin-right: 20px;"><a href="home.html" style="color: white; text-decoration: none;">Beranda</a></li>
+            <li style="display: inline; margin-right: 20px;"><a href="visi_misi.html" style="color: white; text-decoration: none;">Visi & Misi</a></li>
+            <li style="display: inline; margin-right: 20px;"><a href="https://www.polibang.ac.id" target="_blank" style="color: white; text-decoration: none;">Website Polibang</a></li>
+            <li style="display: inline; margin-right: 20px;"><a href="form.html" style="color: white; text-decoration: none;">Formulir</a></li>
+        </ul>
+    </nav>
+
+    <!-- Layout Website: Tabel untuk Sidebar dan Konten -->
+    <table width="100%" cellspacing="10">
+        <tr>
+            <!-- Sidebar -->
+            <td width="20%" valign="top" style="background-color: #f2f2f2; padding: 15px;">
+                <h3>Teman Satu Kelas</h3>
+                <ul style="list-style-type: none; padding: 0;">
+                    <li><a href="javascript:void(0)" onclick="showDetails('teman1')">Yususf</a></li>
+                    <li><a href="javascript:void(0)" onclick="showDetails('teman2')">Wawan</a></li>
+                    <li><a href="javascript:void(0)" onclick="showDetails('teman3')">Romli</a></li>
+                    <li><a href="javascript:void(0)" onclick="showDetails('teman4')">Nilnal</a></li>
+                </ul>
+                <br>
+                <div id="teman-detail" style="display: none;">
+                    <h3>Identitas Teman</h3>
+                    <p id="teman-name"></p>
+                    <p id="teman-info"></p>
+                    <img id="teman-photo" src="" alt="Foto Teman" width="150" height="150">
+                </div>
+            </td>
+
+            <!-- Konten Utama -->
+            <td valign="top">
+                <h2>Visi dan Misi Prodi Rekayasa Perangkat Lunak (RPL)</h2>
+                <p>Visi Prodi RPL adalah menjadi program studi unggul yang menghasilkan tenaga ahli di bidang Rekayasa Perangkat Lunak yang kompetitif, kreatif, dan inovatif pada tahun 2030.</p>
+                <p>Misi Prodi RPL adalah:</p>
+                <ul>
+                    <li>Menyelenggarakan pendidikan yang berkualitas di bidang Rekayasa Perangkat Lunak.</li>
+                    <li>Melakukan penelitian dan pengembangan di bidang teknologi perangkat lunak.</li>
+                    <li>Menyediakan layanan pengabdian masyarakat dalam bidang Rekayasa Perangkat Lunak.</li>
+                </ul>
+                <h3>Nama Dosen Prodi RPL</h3>
+                <p>Dr. Ahmad Suryadi, M.Kom.</p>
+                <p>Ir. Siti Nurhaliza, M.T.</p>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Footer -->
+    <footer style="background-color: #084ea8; color: white; padding: 20px; text-align: center;">
+        <img src="logo polibang.jpeg" alt="Logo Polibang" width="50" height="50">
+        <p>&copy; 2024 Politeknik Negeri Bangka Belitung | Pembuat: [Nama Anda]</p>
+        <p>Alamat: Jl. Raya Polibang, Bangka Belitung, Indonesia</p>
+    </footer>
+
+    <script>
+        // Fungsi untuk menampilkan detail teman
+        function showDetails(teman) {
+            var name, info, photo;
+
+            switch (teman) {
+                case 'teman1':
+                    name = "Yusuf";
+                    info = "NIM: 2023010001, Jurusan: kedokteeran";
+                    photo = "yusuf.jpg";
+                    break;
+                case 'teman2':
+                    name = "Wawan";
+                    info = "NIM: 2023010002, Jurusan: pendidikann";
+                    photo = "wawan.jpg";
+                    break;
+                case 'teman3':
+                    name = "Romli";
+                    info = "NIM: 2023010003, Jurusan: pertanian";
+                    photo = "romli.jpg";
+                    break;
+                case 'teman4':
+                    name = "Nilnal";
+                    info = "NIM: 2023010004, Jurusan: bisnis";
+                    photo = "nilnal.jpg";
+                    break;
+            }
+
+            document.getElementById('teman-name').innerHTML = name;
+            document.getElementById('teman-info').innerHTML = info;
+            document.getElementById('teman-photo').src = photo;
+            document.getElementById('teman-detail').style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
